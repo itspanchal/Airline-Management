@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+  <h1>Available Flights</h1>
+  <ul>
+    {% for flight in items %}
+      <li>
+        <strong>{{ flight.airline }}</strong> —
+        {{ flight.source_airport_code }} → {{ flight.destination_airport_code }}<br>
+        Date: {{ flight.date_of_departure }}<br>
+        Time: {{ flight.time_of_departure }}<br>
+        Duration: {{ flight.duration }} hours<br>
+        <a href="{{ flight.route }}">View Flight</a>
+      </li>
+      <hr>
+    {% endfor %}
+  </ul>
+{% endblock %}
