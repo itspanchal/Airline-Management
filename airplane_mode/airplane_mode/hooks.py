@@ -240,3 +240,12 @@ app_license = "mit"
 website_route = [
     {'from_route': '/show-me', 'to_route': 'airplane_mode.www.show_me.show_me'}
 ]
+
+fixtures = [
+    {
+        "doctype": "Notification",
+        "filters": {
+            "name": ["like", "%Notification"]
+        }
+    }
+]

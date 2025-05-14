@@ -2,7 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "format:{airplane}-{month}-{year}-{#####}",
+ "autoname": "format:{airplane}-{MM}-{YYYY}-{#####}",
  "creation": "2025-05-14 15:06:28.246055",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -147,7 +147,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-05-14 19:13:07.368679",
+ "modified": "2025-05-14 23:12:58.632737",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -167,7 +167,7 @@
    "write": 1
   }
  ],
- "route": "flights",
+ "route": "route",
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",

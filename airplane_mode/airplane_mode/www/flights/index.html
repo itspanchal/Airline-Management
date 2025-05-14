@@ -1,18 +1,17 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-  <h1>Available Flights</h1>
-  <ul>
-    {% for flight in items %}
-      <li>
-        <strong>{{ flight.airline }}</strong> —
-        {{ flight.source_airport_code }} → {{ flight.destination_airport_code }}<br>
-        Date: {{ flight.date_of_departure }}<br>
-        Time: {{ flight.time_of_departure }}<br>
-        Duration: {{ flight.duration }} hours<br>
-        <a href="{{ flight.route }}">View Flight</a>
-      </li>
-      <hr>
-    {% endfor %}
-  </ul>
+<h2>Available Flights</h2>
+
+{% for flight in flights %}
+<div class="card my-3 p-3">
+    <h4>{{ flight.airplane }} </h4>
+	<p>{{ flight.source_airport_code }} → {{ flight.destination_airport_code }}</p>
+    <p><strong>Date:</strong> {{ flight.xdate_of_departure }}</p>
+    <p><strong>Time:</strong> {{ flight.time_of_departure }}</p>
+    <p><strong>Duration:</strong> {{ flight.duration }}</p>
+    <a class="btn btn-primary" href="{{ flight.route }}">View Flight</a>
+</div>
+{% endfor %}
+
 {% endblock %}

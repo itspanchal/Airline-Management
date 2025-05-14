@@ -44,7 +44,7 @@ class AirplaneTicket(Document):
 	# Checked the TicketStatus before the submit Airline ticket.
 	def before_submit(self):
 		import pdb;pdb.set_trace()
-		if self.custom_status == "Boarded":
+		if self.status == "Boarded":
 			frappe.throw(_("Ticket is already boarded"))
 
 
