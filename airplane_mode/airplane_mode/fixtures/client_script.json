@@ -2,12 +2,12 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
-  "dt": "Airplane Ticket",
+  "dt": "Airport Shop",
   "enabled": 1,
-  "modified": "2025-05-15 12:55:12.499864",
-  "module": "Airplane Mode",
-  "name": "Airline ticket client script",
-  "script": "frappe.ui.form.on('Airplane Ticket', {\n    refresh: function(frm) {\n        frm.page.add_action_item(__('Assign Seat'), () => {\n            let d = new frappe.ui.Dialog({\n                title: 'Assign Seat Number',\n                fields: [\n                    {\n                        label: 'Seat Number',\n                        fieldname: 'seat_number',\n                        fieldtype: 'Data',\n                        reqd: 1\n                    }\n                ],\n                primary_action_label: 'Assign Seat',\n                primary_action(values) {\n                    frm.set_value('seat', values.seat_number);\n                    \n                    // Optional: Unhide the seat field if it's hidden\n                    frm.set_df_property('seat', 'hidden', 0);\n\n                    d.hide();\n                }\n            });\n\n            d.show();\n        });\n    }\n});\n",
+  "modified": "2025-05-16 01:07:55.556427",
+  "module": "Airport Shop Management Module",
+  "name": "Shop script",
+  "script": "frappe.ui.form.on(\"Airport Shop\", {\n    onload: function (frm) {\n        frm.set_query(\"shop_type\", function () {\n            return {\n                filters: {\n                    enabled: 1\n                }\n            };\n        });\n    }\n});\n",
   "view": "Form"
  }
 ]

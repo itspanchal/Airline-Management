@@ -244,7 +244,7 @@ fixtures = [
         }
     },
     {
-        "doctype": "Shop Type",
+        "doctype": "Shop Types",
         "filters": {
             "shop_type_name": ["in", ["Stall", "Walk-through", "Normal"]]
         }
