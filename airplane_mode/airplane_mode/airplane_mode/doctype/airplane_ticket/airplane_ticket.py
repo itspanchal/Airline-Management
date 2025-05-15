@@ -41,6 +41,11 @@ class AirplaneTicket(Document):
 			add_ons_amount.get("amount", 0) for add_ons_amount in self.add_ons)
 		self.total_amount = self.flight_price + add_ons_item_total
 
+		if self.flight:
+			flight = frappe.get_doc("Airplane Flight", self.flight)
+
+			self.gate_number = flight.gate_number
+
 
 
 	# Remove duplicate add_ons value
@@ -61,7 +66,7 @@ class AirplaneTicket(Document):
 	# Checked the TicketStatus before the submit Airline ticket.
 	def before_submit(self):
 		import pdb;pdb.set_trace()
-		if self.status == "Boarded":
+		if self.ticketstatus == "Boarded":
 			frappe.throw(_("Ticket is already boarded"))
 
 

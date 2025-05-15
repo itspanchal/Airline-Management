@@ -24,7 +24,8 @@
   "departure_time",
   "column_break_wklx",
   "duration_of_flight",
-  "amended_from"
+  "amended_from",
+  "gate_number"
  ],
  "fields": [
   {
@@ -148,13 +149,19 @@
    "label": "Status",
    "options": "Booked\nChecked-In\nBoarded",
    "reqd": 1
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate number",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-15 17:44:30.593196",
+ "modified": "2025-05-15 23:12:36.749952",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

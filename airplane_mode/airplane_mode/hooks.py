@@ -132,34 +132,23 @@ webform_include_js = {"airline": "public/js/airline_webform.js"}
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Shop": {
+        "on_update": "airplane_mode.tasks.update_airport_shop_stats",
+        "on_trash": "airplane_mode.tasks.update_airport_shop_stats"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"airplane_mode.tasks.all"
-# 	],
-# 	"daily": [
-# 		"airplane_mode.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"airplane_mode.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"airplane_mode.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "cron": {
+        "0 9 1 * *": [
+            "airplane_mode.tasks.send_rent_reminders"
+        ]
+    }
+}
 
 # Testing
 # -------
@@ -240,7 +229,6 @@ webform_include_js = {"airline": "public/js/airline_webform.js"}
 website_route = [
     {'from_route': '/show-me', 'to_route': 'airplane_mode.www.show_me.show_me'}
 ]
-
 fixtures = [
     "Custom Field",
     "Property Setter",
@@ -254,5 +242,19 @@ fixtures = [
         "filters": {
             "name": ["like", "%Notification"]
         }
+    },
+    {
+        "doctype": "Shop Type",
+        "filters": {
+            "shop_type_name": ["in", ["Stall", "Walk-through", "Normal"]]
+        }
+    },
+	{
+        "doctype": "Client Script",
+        "filters": {
+            "dt": ["=", "Airport Shop"]
+        }
     }
 ]
+
+
