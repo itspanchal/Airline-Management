@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h2>Available Flights</h2>
+
+{% for flight in flights %}
+<div class="card my-3 p-3">
+    <h4>{{ flight.airplane }} </h4>
+	<p>{{ flight.source_airport_code }} → {{ flight.destination_airport_code }}</p>
+    <p><strong>Date:</strong> {{ flight.xdate_of_departure }}</p>
+    <p><strong>Time:</strong> {{ flight.time_of_departure }}</p>
+    <p><strong>Duration:</strong> {{ flight.duration }}</p>
+    <a class="btn btn-primary" href="{{ flight.route }}">View Flight</a>
+</div>
+{% endfor %}
+
+{% endblock %}
