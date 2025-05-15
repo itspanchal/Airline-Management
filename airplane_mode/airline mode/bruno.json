@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "airline mode",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

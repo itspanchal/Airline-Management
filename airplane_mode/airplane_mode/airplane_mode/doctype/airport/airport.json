@@ -9,7 +9,10 @@
   "airport_section",
   "code",
   "city",
-  "country"
+  "country",
+  "total_shops",
+  "shops_occupied",
+  "shops_available"
  ],
  "fields": [
   {
@@ -37,12 +40,28 @@
    "in_list_view": 1,
    "label": "Country",
    "reqd": 1
+  },
+  {
+   "fieldname": "total_shops",
+   "fieldtype": "Int",
+   "label": "Total Shops"
+  },
+  {
+   "fieldname": "shops_occupied",
+   "fieldtype": "Int",
+   "label": "Shops Occupied"
+  },
+  {
+   "fieldname": "shops_available",
+   "fieldtype": "Int",
+   "label": "Shops Available",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 17:36:59.266033",
+ "modified": "2025-05-16 00:38:52.157735",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport",
