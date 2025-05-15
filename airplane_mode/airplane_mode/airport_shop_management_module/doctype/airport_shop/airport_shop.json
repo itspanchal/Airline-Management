@@ -13,7 +13,7 @@
   "shop_rent_amount",
   "shop_contract_start_date",
   "shop_contract_end_date",
-  "shop_ty",
+  "shop_type",
   "tenant",
   "is_occupied"
  ],
@@ -50,8 +50,7 @@
   {
    "fieldname": "shop_rent_amount",
    "fieldtype": "Currency",
-   "label": "Shop Rent Amount",
-   "reqd": 1
+   "label": "Shop Rent Amount"
   },
   {
    "fieldname": "shop_contract_start_date",
@@ -66,13 +65,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "shop_ty",
-   "fieldtype": "Link",
-   "label": "Shop Type",
-   "options": "Shop Types",
-   "reqd": 1
-  },
-  {
    "fieldname": "tenant",
    "fieldtype": "Link",
    "label": "Tenant",
@@ -84,12 +76,19 @@
    "fieldname": "is_occupied",
    "fieldtype": "Check",
    "label": "is_occupied"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Link",
+   "label": "Shop Type",
+   "options": "Shop Types",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-16 01:01:33.496117",
+ "modified": "2025-05-16 03:24:44.841257",
  "modified_by": "Administrator",
  "module": "Airport Shop Management Module",
  "name": "Airport Shop",
