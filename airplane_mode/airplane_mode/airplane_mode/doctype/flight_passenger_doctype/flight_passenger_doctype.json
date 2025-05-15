@@ -54,7 +54,7 @@
    "link_fieldname": "headquarters"
   }
  ],
- "modified": "2025-05-14 10:19:31.460429",
+ "modified": "2025-05-15 17:51:31.935197",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flight Passenger Doctype",
@@ -70,6 +70,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
    "share": 1,
    "write": 1
   }

@@ -10,6 +10,7 @@ import string
 
 class AirplaneTicket(Document):
 
+
 	# Set the rendom string in the seat field
 	def before_insert(self):
 		number = random.randint(1,99)
@@ -17,13 +18,29 @@ class AirplaneTicket(Document):
 		# print(f'{ number}{ascii_value}')
 		self.seat = f'{ number}{ascii_value}'
 
+		flight = frappe.get_doc("Airplane Flight", self.flight)
+
+		airplane = frappe.get_doc("Airplane", flight.airplane)
+		airplane_capacity = airplane.capacity
+
+		tickets_count = frappe.db.count("Airplane Ticket", {
+			"flight": self.flight,
+			"docstatus": ["!=", 2]
+		})
+
+
+		if tickets_count >= airplane_capacity:
+			frappe.throw(_("Oops! Ticket not available for this flight").format(
+				airplane.name, airplane_capacity
+			))
+
 
 	# calculate the total amount and populate before the save
 	def before_save(self):
-		# import pdb; pdb.set_trace()
 		add_ons_item_total = sum(
 			add_ons_amount.get("amount", 0) for add_ons_amount in self.add_ons)
 		self.total_amount = self.flight_price + add_ons_item_total
+
 
 
 	# Remove duplicate add_ons value
