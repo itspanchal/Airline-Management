@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:shop_type_name",
  "creation": "2025-05-16 00:45:02.451238",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "enabled",
-  "shoo_type_name"
+  "shop_type_name"
  ],
  "fields": [
   {
@@ -16,18 +17,20 @@
    "label": "Enabled"
   },
   {
-   "fieldname": "shoo_type_name",
+   "fieldname": "shop_type_name",
    "fieldtype": "Data",
-   "label": "Shoo type Name"
+   "label": "Shop type Name",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-16 00:49:34.754170",
+ "modified": "2025-05-16 02:49:02.432897",
  "modified_by": "Administrator",
  "module": "Airport Shop Management Module",
  "name": "Shop Types",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
