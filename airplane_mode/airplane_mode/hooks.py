@@ -242,6 +242,13 @@ website_route = [
 ]
 
 fixtures = [
+    "Custom Field",
+    "Property Setter",
+    "Client Script",
+    "DocType",
+    "Role",
+    "Report",
+    "Web Form",
     {
         "doctype": "Notification",
         "filters": {
