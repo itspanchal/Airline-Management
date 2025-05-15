@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:shop_name",
+ "creation": "2025-05-15 22:08:54.378002",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_name",
+  "shop_number",
+  "airport",
+  "shop_area",
+  "shop_rent_amount",
+  "shop_contract_start_date",
+  "shop_contract_end_date",
+  "shop_type",
+  "tenant",
+  "is_occupied"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_area",
+   "fieldtype": "Data",
+   "label": "Shop Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_rent_amount",
+   "fieldtype": "Currency",
+   "label": "Shop Rent Amount"
+  },
+  {
+   "fieldname": "shop_contract_start_date",
+   "fieldtype": "Date",
+   "label": "Shop Contract Start Date ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_contract_end_date",
+   "fieldtype": "Date",
+   "label": "Shop Contract End Date ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Airport Tenant",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_occupied",
+   "fieldtype": "Check",
+   "label": "is_occupied"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Link",
+   "label": "Shop Type",
+   "options": "Shop Types",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-16 03:24:44.841257",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management Module",
+ "name": "Airport Shop",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
