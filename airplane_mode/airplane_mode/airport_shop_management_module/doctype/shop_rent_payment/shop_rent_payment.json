@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "prompt",
  "creation": "2025-05-15 22:36:23.743156",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -41,10 +42,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 22:39:01.271818",
+ "modified": "2025-05-16 04:22:40.687887",
  "modified_by": "Administrator",
  "module": "Airport Shop Management Module",
  "name": "Shop Rent Payment",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

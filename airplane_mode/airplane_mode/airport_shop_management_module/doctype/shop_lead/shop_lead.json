@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:shop",
  "creation": "2025-05-16 01:37:04.866287",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,11 +16,13 @@
    "fieldname": "shop",
    "fieldtype": "Link",
    "label": "Shop",
-   "options": "Airport Shop"
+   "options": "Airport Shop",
+   "unique": 1
   },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Full Name"
   },
   {
@@ -36,10 +39,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-16 01:38:18.422256",
+ "modified": "2025-05-16 04:19:13.148089",
  "modified_by": "Administrator",
  "module": "Airport Shop Management Module",
  "name": "Shop Lead",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -58,5 +62,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "shop"
 }
