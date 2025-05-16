@@ -9,7 +9,6 @@ from airplane_mode.tasks import update_ticket_gates
 
 class AirplaneFlight(WebsiteGenerator):
 	def on_submit(self):
-		print("========================")
 		self.status = "Completed"
 
 	def on_update(self):
